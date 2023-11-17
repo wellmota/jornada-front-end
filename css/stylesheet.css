@@ -61,7 +61,6 @@
   color:var(--light-lavender);
 }
 
-
 /* end colors */
 
 /* icons iconmoon */
@@ -142,32 +141,34 @@ p {
 }
 
 button.button-primary {
-  background-color: var(--dark-gray-blue);
+  background: var(--dark-gray-blue);
   padding: 16px;
   color: var(--pure-white);
   font-size: large;
   font-weight: 600;
   border-radius: 100px;
   border: none;
+
 }
 
 button.button-primary:hover {
-  background-color: red;
+  background:var(--primary-gradient);
+  transition: all 0.3s ease;
 }
 
-#card {
+.card {
   display: flex;
   background-color: var(--white);
   border-radius: 30px;
   box-shadow: 0px 4px 45px 0px rgba(143, 158, 211, 0.30);
 }
 
-#card header {
+.card header {
   font-size: 1.7rem;
   font-weight: 600;
 }
 
-#card .left-col {
+.card .left-col {
   flex-direction: column;
   align-items: center;
   gap:30px;
@@ -177,13 +178,13 @@ button.button-primary:hover {
   max-width: 265px;
 }
 
-#card .right-col {
+.card .right-col {
   padding: 40px;
   flex-direction: column;
   gap: 30px;
 }
 
-#card .result-score {
+.card .result-score {
   background: var(--secondary-gradient);
   border-radius: 100%;
   flex-basis: auto;
@@ -194,18 +195,18 @@ button.button-primary:hover {
   align-items: center;
 }
 
-#card .result-score h2 {
+.card .result-score h2 {
   font-size: 4rem;
   font-weight: 700;
 }
 
-#card .result-summary-list {
+.card .result-summary-list {
   flex-direction: column;
   gap:14px;
 }
 
 
-#card .result-summary-list .item {
+.card .result-summary-list .item {
   flex-direction: row;
   justify-content: space-between;
   gap: 80px;
@@ -213,49 +214,49 @@ button.button-primary:hover {
   padding: 20px;
 }
 
-#card .result-summary-list .item span {
+.card .result-summary-list .item span {
   color: var(--light-gray);
 }
 
 /* The idea here is to set style for each category */
 
-#card .result-summary-list .category-reaction {
+.card .result-summary-list .category-reaction {
   background-color: var(--danger-10);
   color: var(--danger);
 }
 
-#card .result-summary-list .category-memory {
+.card .result-summary-list .category-memory {
   background-color: var(--warning-10);
   color: var(--warning);
 }
 
-#card .result-summary-list .category-verbal {
+.card .result-summary-list .category-verbal {
   background-color: var(--success-10);
   color: var(--success);
 }
 
-#card .result-summary-list .category-visual {
+.card .result-summary-list .category-visual {
   background-color: var(--info-10);
   color: var(--info)
 }
 
-#card .result-summary-list .item p:nth-child(1){
+.card .result-summary-list .item p:nth-child(1){
   color:black;
 }
 
 /* End category style */
 
-#card .result-summary-list .item .col {
+.card .result-summary-list .item .col {
   gap: 8px;
   flex-direction: row;
   align-items: center;
 }
 
-#card .result-summary-list p {
+.card .result-summary-list p {
   font-weight: 600;
 }
 
-#card .bottom {
+.card .bottom {
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -263,11 +264,10 @@ button.button-primary:hover {
   gap:8px
 }
 
-#card .bottom h3 {
+.card .bottom h3 {
   font-size: 1.9rem;
   font-weight: 600;
 }
-
 
 
 @media (max-width: 710px) {
@@ -278,54 +278,54 @@ button.button-primary:hover {
     font-size: 1rem;
   }
 
-  #card {
+  .card {
     flex-direction: column;
     padding: 0;
     height: 100%;
   }
 
-  #card .result-score {
+  .card .result-score {
     width: 160px;
     height: 160px;
   }
 
-  #card .left-col {
+  .card .left-col {
     border-radius: 0 0 30px 30px;
     gap: 10px;
     padding-top: 35px;
     padding-bottom: 35px;
   }
 
-  #card .left-col header {
+  .card .left-col header {
     font-size: 1.4rem;
   }
 
-  #card .result-score h2 {
+  .card .result-score h2 {
     font-size: 3.3rem;
   }
 
-  #card .left-col .bottom h3 {
+  .card .left-col .bottom h3 {
     font-size: 1.4rem;
   }
 
-  #card .left-col .bottom p {
+  .card .left-col .bottom p {
     font-size: 1rem;
   }
 
-  #card .right-col{
+  .card .right-col{
     gap: 25px;
 
   }
 
-  #card .right-col .result-summary-list {
+  .card .right-col .result-summary-list {
     gap:16px
   }
 
-  #card .right-col .result-summary-list .item {
+  .card .right-col .result-summary-list .item {
     padding: 16px;
   }
 
-  #card .right-col header{
+  .card .right-col header{
     font-size:1.3rem
   }
 
