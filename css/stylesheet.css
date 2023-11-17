@@ -46,6 +46,7 @@
 
 }
 
+
 /* Text Colors */
 .text-pure-black{
   color:black;
@@ -112,14 +113,19 @@
 
 /* end iconmoon */
 
-
-body,.left-col,.right-col,.bottom,.message,.result-score,.result-summary-list,.result-summary-list .item, .result-summary-list .col{
-  display: flex;
-}
-
-body,button,p,h1,h2,h3,h4,h5,a {
+html {
   font-family: 'Hanken Grotesk', sans-serif;
 }
+
+.d-flex {
+  display:flex
+}
+
+/* body,.left-col,.right-col,.bottom,.message,.result-score,.result-summary-list,.result-summary-list .item, .result-summary-list .col{
+  display: flex;
+} */
+
+
 
 body {
   overflow: hidden;
