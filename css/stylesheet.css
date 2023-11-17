@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
 /* Colors */
 :root{
-
   /* Primary */
   --light-red:hsl(0,100%,67%);
   --orangey-yellow:hsl(39, 100%, 56%);
@@ -21,7 +18,6 @@
   --medium-gray: hsl(246, 100%, 75%);
   --dark:hsl(237,19%,20%);
   
-
   /* System colors */
   --success:var(--green-teal);
   --warning:var(--orangey-yellow);
@@ -43,29 +39,45 @@
 
   --primary-gradient: linear-gradient(to bottom,var(--light-slate-blue), var(--light-royal-blue));
   --secondary-gradient: linear-gradient(to bottom,var(--violet-blue), var(--persian-blue));
-
 }
 
-
-/* Text Colors */
-.text-pure-black{
+.pure-black{
   color:black;
 }
-.text-pure-white{
+.pure-white{
   color:var(--white);
 }
-.text-grey{
+.grey{
   color:var(--medium-gray);
 }
-
-.text-light-lavander{
+.light-lavander{
   color:var(--light-lavender);
 }
-
+.bg-primary-gradient{
+  background: var(--primary-gradient);
+}
+.bg-secondary-gradient{
+  background: var(--secondary-gradient);
+} 
+.bg-danger{
+  background: var(--danger)
+}
+.bg-warning {
+  background: var(--warning);
+}
+.bg-success {
+  background: var(--success);
+}
+.bg-info{
+  background: var(--info);
+}
 /* end colors */
-
+/* fonts look and feel */
+.fw-500 {
+  font-weight: 500;
+}
+/* end fonts look and feel */
 /* icons iconmoon */
-
 @font-face {
   font-family: 'icomoon';
   src:  url('../assets/fonts/icomoon.eot?evnxya');
@@ -77,7 +89,6 @@
   font-style: normal;
   font-display: block;
 }
-
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -93,7 +104,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .icon-icon-memory:before {
   content: "\e900";
   color: var(--warning);
@@ -110,8 +120,13 @@
   content: "\e903";
   color: var(--info);
 }
-
 /* end iconmoon */
+
+/* Shadows */
+
+.shadow-10 {
+  box-shadow: 24px 38px 45px 0px rgba(143, 158, 211, 0.10);
+}
 
 html {
   font-family: 'Hanken Grotesk', sans-serif;
@@ -166,12 +181,11 @@ button.button-primary:hover {
   display: flex;
   background-color: var(--white);
   border-radius: 30px;
-  box-shadow: 0px 4px 45px 0px rgba(143, 158, 211, 0.30);
 }
 
 .card header {
-  font-size: 1.7rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .card .left-col {
