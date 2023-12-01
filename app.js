@@ -1,17 +1,29 @@
-const endpoint = "http://localhost:3000/summary"
-  
+const summaryEndpoint = "http://localhost:3000/summary"
+const resultsEndpoint = "http://localhost:3000/result"
+
+// Accessing dom elements
 const summaryListContainer = document.querySelector("#summary-list-container");
+const resultContainer = document.querySelector("#result")
+
 // Bringing data from API
-async function getSummaryResults(){
-  const response = await fetch(endpoint);
+async function getSummary(){
+  const response = await fetch(summaryEndpoint);
   const data = await response.json();
   return data
 };
 
+async function getResults(){
+  const response = await fetch(resultsEndpoint);
+  const data = await response.json();
+  return data
+  
+};
 
+
+// Function to create the summary list
 async function createSummaryList(){
   // Adding ending point data into a variable, detail here is add "await"
-  const summaryResults = await getSummaryResults();
+  const summaryResults = await getSummary();
   // Navigation to each array of objects
   return summaryResults.forEach(function(result){
     // Creating html of each item
@@ -26,10 +38,20 @@ async function createSummaryList(){
       </div>
     </div>
   `
-    console.log(result);
   })
 };
 
+
+
+async function showResult(){
+  const resultsScore = await getResults()
+  const score = resultContainer.querySelector('div h2')
+  const comparison = resultContainer.querySelector('.bottom span')
+  score.innerHTML = `${resultsScore.score}`
+  comparison.innerHTML = `${resultsScore.performance_comparison}`
+}
+
+showResult()
 createSummaryList();
 
 
