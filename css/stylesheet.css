@@ -136,6 +136,10 @@ html {
   display:flex
 }
 
+.gap-10{
+  margin: 10px;
+}
+
 /* body,.left-col,.right-col,.bottom,.message,.result-score,.result-summary-list,.result-summary-list .item, .result-summary-list .col{
   display: flex;
 } */
