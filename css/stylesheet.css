@@ -114,7 +114,7 @@
 }
 .icon-icon-verbal:before {
   content: "\e902";
-  color: var(--succes);
+  color: var(--success);
 }
 .icon-icon-visual:before {
   content: "\e903";
