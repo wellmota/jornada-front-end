@@ -34,7 +34,7 @@ async function createSummaryList(){
         <p>${result.id.substring(0,1).toUpperCase()+result.id.substring(1)}</p>
       </div>
       <div class="col">
-        <p>${result.score}<span>/100</span></p>  
+        <p>${result.score} <span>/ 100</span></p> 
       </div>
     </div>
   `

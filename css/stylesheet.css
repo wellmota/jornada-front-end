@@ -114,7 +114,7 @@
 }
 .icon-icon-verbal:before {
   content: "\e902";
-  color: var(--succes);
+  color: var(--success);
 }
 .icon-icon-visual:before {
   content: "\e903";
@@ -137,7 +137,7 @@ html {
 }
 
 .gap-10{
-  margin: 10px;
+  gap: 30px;
 }
 
 /* body,.left-col,.right-col,.bottom,.message,.result-score,.result-summary-list,.result-summary-list .item, .result-summary-list .col{
@@ -226,7 +226,7 @@ button.button-primary:hover {
 
 .card .result-summary-list {
   flex-direction: column;
-  gap:14px;
+  gap:10px;
 }
 
 
@@ -267,6 +267,7 @@ button.button-primary:hover {
 .card .result-summary-list .item p:nth-child(1){
   color:black;
 }
+
 
 /* End category style */
 
