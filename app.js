@@ -42,7 +42,6 @@ async function createSummaryList(){
 };
 
 
-
 async function showResult(){
   const resultsScore = await getResults()
   const score = resultContainer.querySelector('div h2')
