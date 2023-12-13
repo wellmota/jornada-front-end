@@ -1,10 +1,6 @@
 const summaryEndpoint = "http://localhost:3000/summary"
 const resultsEndpoint = "http://localhost:3000/result"
 
-// Accessing dom elements
-const summaryListContainer = document.querySelector("#summary-list-container");
-const resultContainer = document.querySelector("#result")
-
 // Bringing data from API
 async function getSummary(){
   const response = await fetch(summaryEndpoint);
@@ -19,6 +15,10 @@ async function getResults(){
   
 };
 
+// Accessing DOM elements
+const summaryListContainer = document.querySelector("#summary-list-container");
+const resultContainer = document.querySelector("#result")
+
 
 // Function to create the summary list
 async function createSummaryList(){
@@ -29,7 +29,7 @@ async function createSummaryList(){
     // Creating html of each item
     summaryListContainer.innerHTML += `
     <div class="item category-${result.id} d-flex">
-      <div class="col d-flex" >
+      <div class="col d-flex">
         <span class="icon-icon-${result.id}"></span>
         <p>${result.id.substring(0,1).toUpperCase()+result.id.substring(1)}</p>
       </div>
