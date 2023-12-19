@@ -1,4 +1,3 @@
-
 const summaryEndpoint = "http://localhost:3000/summary"
 const resultsEndpoint = "http://localhost:3000/result"
 
@@ -23,7 +22,6 @@ async function getResults(){
 
 
 // Accessing DOM elements
-const body = document.body
 const card = document.querySelector(".card")
 const summaryListContainer = document.querySelector("#summary-list-container");
 const resultContainer = document.querySelector("#result")
@@ -68,13 +66,11 @@ async function createSummaryList(){
   })
 };
 
-
 async function showResult(){
   const resultsScore = await getResults()
   score.innerHTML = `${resultsScore.score}`
   comparison.innerHTML = `${resultsScore.performance_comparison}`
 }
-
 
 showResult()
 createSummaryList();
