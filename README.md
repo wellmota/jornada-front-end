@@ -97,9 +97,9 @@ Some instructions
 Acknowledgements
 
 * Learn JavaScript
-* Loading.IO
-* Javascript Functions
-* Element: innerHTML property
-* Element: append() method
-* Element: prepend() method
+* Loading.IO (https://loading.io/css/)
+* Javascript Functions(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+* Element: innerHTML property(https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
+* Element: append() method(https://developer.mozilla.org/en-US/docs/Web/API/Element/append)
+* Element: prepend() method(https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend)
 
