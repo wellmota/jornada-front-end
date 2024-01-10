@@ -1,0 +1,24 @@
+{
+  "result": {
+    "score": 76,
+    "performance_comparison": 65
+  },
+  "summary": [
+    {
+      "id": "reaction",
+      "score": 80
+    },
+    {
+      "id": "memory",
+      "score": 92
+    },
+    {
+      "id": "verbal",
+      "score": 61
+    },
+    {
+      "id": "visual",
+      "score": 72
+    }
+  ]
+}

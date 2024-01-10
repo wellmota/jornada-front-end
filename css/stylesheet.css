@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Colors */
+:root{
+  /* Primary */
+  --light-red:hsl(0,100%,67%);
+  --orangey-yellow:hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --pure-white:hsl(0,0%,100%);
+
+  /* Neutral */
+  --white:hsl(0, 0%, 100%);
+  --pale-blue:hsl(221, 100%, 96%);
+  --light-lavender:hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+  --light-gray:hsl(210, 8%, 58%);
+  --gray:hsl(223, 30%, 28%);
+  --medium-gray: hsl(246, 100%, 75%);
+  --dark:hsl(237,19%,20%);
+  
+  /* System colors */
+  --success:var(--green-teal);
+  --warning:var(--orangey-yellow);
+  --info:var(--cobalt-blue);
+  --danger:var(--light-red);
+
+  /* System colors scale */
+  --danger-10:hsla(0,73%,60%,0.10);
+  --warning-10:hsla(39,77%,63%,0.10);
+  --success-10:hsla(163,55%,44%,0.10);
+  --info-10:hsla(236,52%,37%,0.10);
+
+  /* Gradients */
+
+  --light-slate-blue:hsl(252, 100%, 67%);
+  --light-royal-blue:hsl(241, 81%, 54%);
+  --violet-blue:hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  --primary-gradient: linear-gradient(to bottom,var(--light-slate-blue), var(--light-royal-blue));
+  --secondary-gradient: linear-gradient(to bottom,var(--violet-blue), var(--persian-blue));
+}
+
+.pure-black{
+  color:black;
+}
+.pure-white{
+  color:var(--white);
+}
+.grey{
+  color:var(--medium-gray);
+}
+.light-lavander{
+  color:var(--light-lavender);
+}
+.bg-primary-gradient{
+  background: var(--primary-gradient);
+}
+.bg-secondary-gradient{
+  background: var(--secondary-gradient);
+} 
+.bg-danger{
+  background: var(--danger)
+}
+.bg-warning {
+  background: var(--warning);
+}
+.bg-success {
+  background: var(--success);
+}
+.bg-info{
+  background: var(--info);
+}
+/* end colors */
+/* fonts look and feel */
+.fw-100 {
+  font-weight: 100;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-700 {
+  font-weight: 700;
+}
+/* end fonts look and feel */
+
+/* Shadows */
+.shadow-10 {
+  box-shadow: 24px 38px 45px 0px rgba(143, 158, 211, 0.10);
+}
+.shadow-40 {
+  box-shadow: 24px 38px 45px 0px rgba(143, 158, 211, 0.40);
+}
+.shadow-60 {
+  box-shadow: 24px 38px 45px 0px rgba(143, 158, 211, 0.60);
+}
+.shadow-90 {
+  box-shadow: 24px 38px 45px 0px rgba(143, 158, 211, 0.90);
+}
+
+html {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.d-flex {
+  display:flex
+}
+
+.flex-center{
+  align-items: center;
+  justify-content: center;
+}
+
+.gap-8{
+  gap: 8px;
+}
+.gap-16{
+  gap: 16px;
+}
+.gap-24{
+  gap: 24px;
+}
+
+body {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color:var(--dark);
+}
+
+p {
+  font-size: 18px;
+  line-height: 135%;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.btn-primary {
+  color: var(--pure-white);
+  font-size: large;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
+.btn-primary.color-primary-gradient {
+  background-image: linear-gradient(to right, var(--dark-gray-blue),var(--dark-gray-blue), var(--light-slate-blue), var(--light-royal-blue));
+}
+
+.card {
+  display: flex;
+  background-color: var(--white);
+  border-radius: 30px;
+  border-radius: 10px;
+}
+
+.card header {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.card .left-col {
+  flex-direction: column;
+  align-items: center;
+  gap:30px;
+  background: var(--primary-gradient);
+  border-radius: 30px;
+  padding: 40px 60px;
+  max-width: 265px;
+}
+
+.card .right-col {
+  padding: 40px;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 230px;
+}
+
+.card .result-score {
+  background: var(--secondary-gradient);
+  border-radius: 100%;
+  flex-basis: auto;
+  width: 200px;
+  height: 200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .result-score h2 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.card .result-summary-list {
+  flex-direction: column;
+  gap:14px;
+}
+
+.card .result-summary-list .item {
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 80px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card .result-summary-list .item span {
+  color: var(--light-gray);
+}
+
+/* The idea here is to set style for each category */
+.card .result-summary-list .category-reaction {
+  background-color: var(--danger-10);
+  color: var(--danger);
+}
+
+.card .result-summary-list .category-memory {
+  background-color: var(--warning-10);
+  color: var(--warning);
+}
+
+.card .result-summary-list .category-verbal {
+  background-color: var(--success-10);
+  color: var(--success);
+}
+
+.card .result-summary-list .category-visual {
+  background-color: var(--info-10);
+  color: var(--info)
+}
+
+.card .result-summary-list .item p:nth-child(1){
+  color:black;
+}
+
+/* End category style */
+.card .result-summary-list .item .col {
+  gap: 8px;
+  flex-direction: row;
+  align-items: center;
+}
+.card .result-summary-list p {
+  font-weight: 600;
+}
+.card .bottom {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap:8px
+}
+.card .bottom h3 {
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+@media (max-width: 710px) {
+
+  body {
+    overflow-y: scroll;
+    font-size: 1rem;
+  }
+
+  .card {
+    flex-direction: column;
+    padding: 0;
+    height: 100%;
+  }
+  .card .result-score {
+    width: 160px;
+    height: 160px;
+  }
+  .card .left-col {
+    border-radius: 0 0 30px 30px;
+    gap: 10px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .card .left-col header {
+    font-size: 1.4rem;
+  }
+  .card .result-score h2 {
+    font-size: 3.3rem;
+  }
+  .card .left-col .bottom h3 {
+    font-size: 1.4rem;
+  }
+  .card .left-col .bottom p {
+    font-size: 1rem;
+  }
+  .card .right-col{
+    gap: 25px;
+  }
+  .card .right-col .result-summary-list {
+    gap:16px
+  }
+  .card .right-col .result-summary-list .item {
+    padding: 16px;
+  }
+  .card .right-col header{
+    font-size:1.3rem
+  }
+}
+.hide{
+  display: none;
+}
+
+
+
+
