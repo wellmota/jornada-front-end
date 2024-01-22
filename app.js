@@ -2,8 +2,7 @@ const SUMMARY_ENDPOINT = "http://localhost:3000/summary"
 const RESULTS_ENDPOINT = "http://localhost:3000/result"
 
 // Bringing data from API
-let isSummaryReady = false
-let isResultsReady = false
+
 
 async function fetchAPI(endpoint) {
     const response = await fetch(endpoint);
@@ -20,12 +19,15 @@ const comparison = resultContainer.querySelector('.bottom span')
 
 // Loader (to be fixed)
 
-// const loaderSpin = `<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>`
-// const loaderContainer = document.querySelectorAll(".lds-ellipsis")
+// let isSummaryReady = fetchAPI(SUMMARY_ENDPOINT);
+// let isResultsReady = fetchAPI(RESULTS_ENDPOINT);
 
-// const loaderDiv = document.createElement('div')
-// document.body.append(loaderDiv);
-// loaderDiv.innerHTML = loaderSpin
+const loaderSpin = `<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>`
+const loaderContainer = document.querySelectorAll(".lds-ellipsis")
+
+const loaderDiv = document.createElement('div')
+document.body.append(loaderDiv);
+loaderDiv.innerHTML = loaderSpin
 
 // function controlLoad(isSummaryReady,isResultsReady){
 //   if(isSummaryReady && isResultsReady){
@@ -35,6 +37,20 @@ const comparison = resultContainer.querySelector('.bottom span')
 //     }, 3000)
 //   }
 // }
+
+
+
+// teste
+
+
+
+
+
+
+// fim do teste
+
+
+
 
 // Function to create the summary list
 async function createSummaryList(){
@@ -63,6 +79,34 @@ async function showResult(){
   comparison.innerHTML = resultsScore.performance_comparison
 }
 
+
+async function fetchAPI(endpoint) {
+  const response = await fetch(endpoint);
+  if (!response.ok) {
+      throw new Error(`Failed to fetch data from ${endpoint}`);
+  }
+  return response.json();
+}
+
+async function controlLoad() {
+  try {
+      const [summaryResponse, resultsResponse] = await Promise.all([
+          fetchAPI(SUMMARY_ENDPOINT),
+          fetchAPI(RESULTS_ENDPOINT)
+      ]);
+      if (summaryResponse && resultsResponse) {
+
+          await new Promise(resolve => setTimeout(resolve, 3000));
+          // Hide the loader and show the card
+          loaderDiv.classList.add('hide');
+          card.classList.remove('hide');
+      } 
+  } catch (error) {
+      console.error('Error:', error);
+  }
+}
+
+controlLoad();
 showResult()
 createSummaryList();
 
