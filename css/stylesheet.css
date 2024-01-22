@@ -11,7 +11,7 @@
   /* Neutral */
   --white:hsl(0, 0%, 100%);
   --pale-blue:hsl(221, 100%, 96%);
-  --light-lavender:hsl(241, 100%, 89%);
+  --light-lavender:hsl(241, 100%, 89%);S
   --dark-gray-blue: hsl(224, 30%, 27%);
   --light-gray:hsl(210, 8%, 58%);
   --gray:hsl(223, 30%, 28%);
@@ -42,16 +42,16 @@
 }
 
 .pure-black{
-  color:black;
+  color: black;
 }
 .pure-white{
-  color:var(--white);
+  color: var(--white);
 }
 .grey{
-  color:var(--medium-gray);
+  color: var(--medium-gray);
 }
 .light-lavander{
-  color:var(--light-lavender);
+  color: var(--light-lavender);
 }
 .bg-primary-gradient{
   background: var(--primary-gradient);
@@ -106,7 +106,7 @@ html {
 }
 
 .d-flex {
-  display:flex
+  display: flex
 }
 
 .flex-center{
@@ -191,7 +191,7 @@ p {
 .card .left-col {
   flex-direction: column;
   align-items: center;
-  gap:30px;
+  gap: 30px;
   background: var(--primary-gradient);
   border-radius: 30px;
   padding: 40px 60px;
@@ -223,7 +223,7 @@ p {
 
 .card .result-summary-list {
   flex-direction: column;
-  gap:14px;
+  gap: 14px;
 }
 
 .card .result-summary-list .item {
@@ -260,7 +260,7 @@ p {
 }
 
 .card .result-summary-list .item p:nth-child(1){
-  color:black;
+  color: black;
 }
 
 /* End category style */
@@ -277,7 +277,7 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap:8px
+  gap: 8px
 }
 .card .bottom h3 {
   font-size: 1.9rem;
@@ -321,7 +321,7 @@ p {
     gap: 25px;
   }
   .card .right-col .result-summary-list {
-    gap:16px
+    gap: 16px
   }
   .card .right-col .result-summary-list .item {
     padding: 16px;
