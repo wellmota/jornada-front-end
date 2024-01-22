@@ -1,11 +1,11 @@
-const summaryEndpoint = "http://localhost:3000/summary"
-const resultsEndpoint = "http://localhost:3000/result"
+const SUMMARY_ENDPOINT = "http://localhost:3000/summary"
+const RESULTS_ENDPOINT = "http://localhost:3000/result"
 
 // Bringing data from API
 let isSummaryReady = false
 let isResultsReady = false
 async function getSummary(){
-  const response = await fetch(summaryEndpoint);
+  const response = await fetch(SUMMARY_ENDPOINT);
   const data = await response.json();
   isSummaryReady = true
   controlLoad(isSummaryReady,isResultsReady);
@@ -13,7 +13,7 @@ async function getSummary(){
 };
 
 async function getResults(){
-  const response = await fetch(resultsEndpoint);
+  const response = await fetch(RESULTS_ENDPOINT);
   const data = await response.json();
   isResultsReady = true
   controlLoad(isSummaryReady,isResultsReady);
