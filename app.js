@@ -4,22 +4,12 @@ const RESULTS_ENDPOINT = "http://localhost:3000/result"
 // Bringing data from API
 let isSummaryReady = false
 let isResultsReady = false
-async function getSummary(){
-  const response = await fetch(SUMMARY_ENDPOINT);
-  const data = await response.json();
-  isSummaryReady = true
-  controlLoad(isSummaryReady,isResultsReady);
-  return data
-};
 
-async function getResults(){
-  const response = await fetch(RESULTS_ENDPOINT);
-  const data = await response.json();
-  isResultsReady = true
-  controlLoad(isSummaryReady,isResultsReady);
-  return data
-};
-
+async function fetchAPI(endpoint) {
+    const response = await fetch(endpoint);
+    const data = await response.json();
+    return data
+}
 
 // Accessing DOM elements
 const card = document.querySelector(".card")
@@ -28,27 +18,28 @@ const resultContainer = document.querySelector("#result")
 const score = resultContainer.querySelector('div h2')
 const comparison = resultContainer.querySelector('.bottom span')
 
-// Loader
-const loaderSpin = `<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>`
-const loaderContainer = document.querySelectorAll(".lds-ellipsis")
+// Loader (to be fixed)
 
-const loaderDiv = document.createElement('div')
-document.body.append(loaderDiv);
-loaderDiv.innerHTML = loaderSpin
+// const loaderSpin = `<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>`
+// const loaderContainer = document.querySelectorAll(".lds-ellipsis")
 
-function controlLoad(isSummaryReady,isResultsReady){
-  if(isSummaryReady && isResultsReady){
-    setTimeout(function () { // add a delay for loading
-      loaderDiv.classList.add('hide');
-      card.classList.remove('hide');
-    }, 3000)
-  }
-}
+// const loaderDiv = document.createElement('div')
+// document.body.append(loaderDiv);
+// loaderDiv.innerHTML = loaderSpin
+
+// function controlLoad(isSummaryReady,isResultsReady){
+//   if(isSummaryReady && isResultsReady){
+//     setTimeout(function () { // add a delay for loading
+//       loaderDiv.classList.add('hide');
+//       card.classList.remove('hide');
+//     }, 3000)
+//   }
+// }
 
 // Function to create the summary list
 async function createSummaryList(){
   // Adding ending point data into a variable, detail here is add "await"
-  const summaryResults = await getSummary();
+  const summaryResults = await fetchAPI(SUMMARY_ENDPOINT);
   // Navigation to each array of objects
   return summaryResults.forEach(function(result){
     // Creating html of each item
@@ -67,7 +58,7 @@ async function createSummaryList(){
 };
 
 async function showResult(){
-  const resultsScore = await getResults()
+  const resultsScore = await fetchAPI(RESULTS_ENDPOINT)
   score.innerHTML = `${resultsScore.score}`
   comparison.innerHTML = `${resultsScore.performance_comparison}`
 }
