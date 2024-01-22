@@ -29,7 +29,7 @@ const comparison = resultContainer.querySelector('.bottom span')
 
 // function controlLoad(isSummaryReady,isResultsReady){
 //   if(isSummaryReady && isResultsReady){
-//     setTimeout(function () { // add a delay for loading
+//     setTimeout (() => { // add a delay for loading
 //       loaderDiv.classList.add('hide');
 //       card.classList.remove('hide');
 //     }, 3000)
@@ -41,7 +41,7 @@ async function createSummaryList(){
   // Adding ending point data into a variable, detail here is add "await"
   const summaryResults = await fetchAPI(SUMMARY_ENDPOINT);
   // Navigation to each array of objects
-  return summaryResults.forEach(function(result){
+  return summaryResults.forEach (result => {
     // Creating html of each item
     summaryListContainer.innerHTML += `
     <div class="item category-${result.id} d-flex">
@@ -59,8 +59,8 @@ async function createSummaryList(){
 
 async function showResult(){
   const resultsScore = await fetchAPI(RESULTS_ENDPOINT)
-  score.innerHTML = `${resultsScore.score}`
-  comparison.innerHTML = `${resultsScore.performance_comparison}`
+  score.innerHTML = resultsScore.score
+  comparison.innerHTML = resultsScore.performance_comparison
 }
 
 showResult()
