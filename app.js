@@ -79,15 +79,6 @@ async function showResult(){
   comparison.innerHTML = resultsScore.performance_comparison
 }
 
-
-async function fetchAPI(endpoint) {
-  const response = await fetch(endpoint);
-  if (!response.ok) {
-      throw new Error(`Failed to fetch data from ${endpoint}`);
-  }
-  return response.json();
-}
-
 async function controlLoad() {
   try {
       const [summaryResponse, resultsResponse] = await Promise.all([
