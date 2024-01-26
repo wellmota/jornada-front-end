@@ -2,8 +2,6 @@ const SUMMARY_ENDPOINT = "http://localhost:3000/summary"
 const RESULTS_ENDPOINT = "http://localhost:3000/result"
 
 // Bringing data from API
-
-
 async function fetchAPI(endpoint) {
     const response = await fetch(endpoint);
     const data = await response.json();
@@ -17,10 +15,6 @@ const resultContainer = document.querySelector("#result")
 const score = resultContainer.querySelector('div h2')
 const comparison = resultContainer.querySelector('.bottom span')
 
-// Loader (to be fixed)
-
-// let isSummaryReady = fetchAPI(SUMMARY_ENDPOINT);
-// let isResultsReady = fetchAPI(RESULTS_ENDPOINT);
 
 const loaderSpin = `<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>`
 const loaderContainer = document.querySelectorAll(".lds-ellipsis")
@@ -28,29 +22,6 @@ const loaderContainer = document.querySelectorAll(".lds-ellipsis")
 const loaderDiv = document.createElement('div')
 document.body.append(loaderDiv);
 loaderDiv.innerHTML = loaderSpin
-
-// function controlLoad(isSummaryReady,isResultsReady){
-//   if(isSummaryReady && isResultsReady){
-//     setTimeout (() => { // add a delay for loading
-//       loaderDiv.classList.add('hide');
-//       card.classList.remove('hide');
-//     }, 3000)
-//   }
-// }
-
-
-
-// teste
-
-
-
-
-
-
-// fim do teste
-
-
-
 
 // Function to create the summary list
 async function createSummaryList(){
