@@ -3,8 +3,8 @@ const RESULTS_ENDPOINT = "http://localhost:3000/result"
 
 // Bringing data from API
 async function fetchAPI(endpoint) {
-    const response = await fetch(endpoint);
-    const data = await response.json();
+    const response = await fetch(endpoint)
+    const data = await response.json()
     return data
 }
 
@@ -20,13 +20,26 @@ const loaderSpin = `<div class="lds-ellipsis"><div></div><div></div><div></div><
 const loaderContainer = document.querySelectorAll(".lds-ellipsis")
 
 const loaderDiv = document.createElement('div')
-document.body.append(loaderDiv);
+document.body.append(loaderDiv)
 loaderDiv.innerHTML = loaderSpin
+
+
+function loading(loadingState) {
+  if (loadingState === 'show') {
+    loaderDiv.classList.remove('hide')
+    card.classList.add('hide')
+  } else {
+    loaderDiv.classList.add('hide')
+    card.classList.remove('hide')
+  }
+}
+
 
 // Function to create the summary list
 async function createSummaryList(){
-  // Adding ending point data into a variable, detail here is add "await"
-  const summaryResults = await fetchAPI(SUMMARY_ENDPOINT);
+  loading('show')
+  const summaryResults = await fetchAPI(SUMMARY_ENDPOINT)
+  loading('hide')
   // Navigation to each array of objects
   return summaryResults.forEach (result => {
     // Creating html of each item
@@ -50,27 +63,9 @@ async function showResult(){
   comparison.innerHTML = resultsScore.performance_comparison
 }
 
-async function controlLoad() {
-  try {
-      const [summaryResponse, resultsResponse] = await Promise.all([
-          fetchAPI(SUMMARY_ENDPOINT),
-          fetchAPI(RESULTS_ENDPOINT)
-      ]);
-      if (summaryResponse && resultsResponse) {
 
-          await new Promise(resolve => setTimeout(resolve, 3000));
-          // Hide the loader and show the card
-          loaderDiv.classList.add('hide');
-          card.classList.remove('hide');
-      } 
-  } catch (error) {
-      console.error('Error:', error);
-  }
-}
-
-controlLoad();
 showResult()
-createSummaryList();
+createSummaryList()
 
 
 
