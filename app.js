@@ -1,5 +1,5 @@
-const SUMMARY_ENDPOINT = "http://localhost:3000/summary"
-const RESULTS_ENDPOINT = "http://localhost:3000/result"
+const SUMMARY_ENDPOINT = 'http://localhost:3000/summary'
+const RESULTS_ENDPOINT = 'http://localhost:3000/result'
 
 // Bringing data from API
 async function fetchAPI(endpoint) {
@@ -9,15 +9,15 @@ async function fetchAPI(endpoint) {
 }
 
 // Accessing DOM elements
-const card = document.querySelector(".card")
-const summaryListContainer = document.querySelector("#summary-list-container");
-const resultContainer = document.querySelector("#result")
+const card = document.querySelector('.card')
+const summaryListContainer = document.querySelector('#summary-list-container');
+const resultContainer = document.querySelector('#result')
 const score = resultContainer.querySelector('div h2')
 const comparison = resultContainer.querySelector('.bottom span')
 
 
 const loaderSpin = `<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>`
-const loaderContainer = document.querySelectorAll(".lds-ellipsis")
+const loaderContainer = document.querySelectorAll('.lds-ellipsis')
 
 const loaderDiv = document.createElement('div')
 document.body.append(loaderDiv)

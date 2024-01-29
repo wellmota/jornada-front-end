@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "start": "concurrently --kill-others \"npm run api-server\" \"npm run http-server\"",
-    "http-server": "http-server ./",
+    "http-server": "http-server -c-1 ./",
     "api-server": "json-server --watch db.json"
   },
   "dependencies": {

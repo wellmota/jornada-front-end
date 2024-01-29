@@ -1,102 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* Colors */
-:root{
+:root {
   /* Primary */
-  --light-red:hsl(0,100%,67%);
-  --orangey-yellow:hsl(39, 100%, 56%);
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
   --green-teal: hsl(166, 100%, 37%);
   --cobalt-blue: hsl(234, 85%, 45%);
-  --pure-white:hsl(0,0%,100%);
+  --pure-white: hsl(0, 0%, 100%);
 
   /* Neutral */
-  --white:hsl(0, 0%, 100%);
-  --pale-blue:hsl(221, 100%, 96%);
-  --light-lavender:hsl(241, 100%, 89%);
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
   --dark-gray-blue: hsl(224, 30%, 27%);
-  --light-gray:hsl(210, 8%, 58%);
-  --gray:hsl(223, 30%, 28%);
+  --light-gray: hsl(210, 8%, 58%);
+  --gray: hsl(223, 30%, 28%);
   --medium-gray: hsl(246, 100%, 75%);
-  --dark:hsl(237,19%,20%);
-  
+  --dark: hsl(237, 19%, 20%);
+
   /* System colors */
-  --success:var(--green-teal);
-  --warning:var(--orangey-yellow);
-  --info:var(--cobalt-blue);
-  --danger:var(--light-red);
+  --success: var(--green-teal);
+  --warning: var(--orangey-yellow);
+  --info: var(--cobalt-blue);
+  --danger: var(--light-red);
 
   /* System colors scale */
-  --danger-10:hsla(0,73%,60%,0.10);
-  --warning-10:hsla(39,77%,63%,0.10);
-  --success-10:hsla(163,55%,44%,0.10);
-  --info-10:hsla(236,52%,37%,0.10);
+  --danger-10: hsla(0, 73%, 60%, 0.10);
+  --warning-10: hsla(39, 77%, 63%, 0.10);
+  --success-10: hsla(163, 55%, 44%, 0.10);
+  --info-10: hsla(236, 52%, 37%, 0.10);
 
   /* Gradients */
 
-  --light-slate-blue:hsl(252, 100%, 67%);
-  --light-royal-blue:hsl(241, 81%, 54%);
-  --violet-blue:hsla(256, 72%, 46%, 1);
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
   --persian-blue: hsla(241, 72%, 46%, 0);
 
-  --primary-gradient: linear-gradient(to bottom,var(--light-slate-blue), var(--light-royal-blue));
-  --secondary-gradient: linear-gradient(to bottom,var(--violet-blue), var(--persian-blue));
+  --primary-gradient: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+  --secondary-gradient: linear-gradient(to bottom, var(--violet-blue), var(--persian-blue));
 }
 
-.pure-black{
+.pure-black {
   color: black;
 }
-.pure-white{
+
+.pure-white {
   color: var(--white);
 }
-.grey{
+
+.grey {
   color: var(--medium-gray);
 }
-.light-lavander{
+
+.light-lavander {
   color: var(--light-lavender);
 }
-.bg-primary-gradient{
+
+.bg-primary-gradient {
   background: var(--primary-gradient);
 }
-.bg-secondary-gradient{
+
+.bg-secondary-gradient {
   background: var(--secondary-gradient);
-} 
-.bg-danger{
+}
+
+.bg-danger {
   background: var(--danger)
 }
+
 .bg-warning {
   background: var(--warning);
 }
+
 .bg-success {
   background: var(--success);
 }
-.bg-info{
+
+.bg-info {
   background: var(--info);
 }
+
 /* end colors */
 /* fonts look and feel */
 .fw-100 {
   font-weight: 100;
 }
+
 .fw-300 {
   font-weight: 300;
 }
+
 .fw-500 {
   font-weight: 500;
 }
+
 .fw-700 {
   font-weight: 700;
 }
+
 /* end fonts look and feel */
 
 /* Shadows */
 .shadow-10 {
   box-shadow: 24px 38px 45px 0px rgba(143, 158, 211, 0.10);
 }
+
 .shadow-40 {
   box-shadow: 24px 38px 45px 0px rgba(143, 158, 211, 0.40);
 }
+
 .shadow-60 {
   box-shadow: 24px 38px 45px 0px rgba(143, 158, 211, 0.60);
 }
+
 .shadow-90 {
   box-shadow: 24px 38px 45px 0px rgba(143, 158, 211, 0.90);
 }
@@ -109,18 +127,20 @@ html {
   display: flex
 }
 
-.flex-center{
+.flex-center {
   align-items: center;
   justify-content: center;
 }
 
-.gap-8{
+.gap-8 {
   gap: 8px;
 }
-.gap-16{
+
+.gap-16 {
   gap: 16px;
 }
-.gap-24{
+
+.gap-24 {
   gap: 24px;
 }
 
@@ -150,7 +170,7 @@ p {
   cursor: pointer;
   margin: 20px;
   height: 55px;
-  text-align:center;
+  text-align: center;
   border: none;
   background-size: 300% 100%;
   border-radius: 50px;
@@ -173,7 +193,7 @@ p {
 }
 
 .btn-primary.color-primary-gradient {
-  background-image: linear-gradient(to right, var(--dark-gray-blue),var(--dark-gray-blue), var(--light-slate-blue), var(--light-royal-blue));
+  background-image: linear-gradient(to right, var(--dark-gray-blue), var(--dark-gray-blue), var(--light-slate-blue), var(--light-royal-blue));
 }
 
 .card {
@@ -259,7 +279,7 @@ p {
   color: var(--info)
 }
 
-.card .result-summary-list .item p:nth-child(1){
+.card .result-summary-list .item p:nth-child(1) {
   color: black;
 }
 
@@ -269,9 +289,11 @@ p {
   flex-direction: row;
   align-items: center;
 }
+
 .card .result-summary-list p {
   font-weight: 600;
 }
+
 .card .bottom {
   flex-direction: column;
   align-items: center;
@@ -279,10 +301,12 @@ p {
   text-align: center;
   gap: 8px
 }
+
 .card .bottom h3 {
   font-size: 1.9rem;
   font-weight: 600;
 }
+
 @media (max-width: 710px) {
 
   body {
@@ -295,45 +319,52 @@ p {
     padding: 0;
     height: 100%;
   }
+
   .card .result-score {
     width: 160px;
     height: 160px;
   }
+
   .card .left-col {
     border-radius: 0 0 30px 30px;
     gap: 10px;
     padding-top: 35px;
     padding-bottom: 35px;
   }
+
   .card .left-col header {
     font-size: 1.4rem;
   }
+
   .card .result-score h2 {
     font-size: 3.3rem;
   }
+
   .card .left-col .bottom h3 {
     font-size: 1.4rem;
   }
+
   .card .left-col .bottom p {
     font-size: 1rem;
   }
-  .card .right-col{
+
+  .card .right-col {
     gap: 25px;
   }
+
   .card .right-col .result-summary-list {
     gap: 16px
   }
+
   .card .right-col .result-summary-list .item {
     padding: 16px;
   }
-  .card .right-col header{
-    font-size:1.3rem
+
+  .card .right-col header {
+    font-size: 1.3rem
   }
 }
-.hide{
+
+.hide {
   display: none;
 }
-
-
-
-
