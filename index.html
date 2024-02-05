@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/iconmoon.css" />
+    <link rel="stylesheet" href="css/loadingstate.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <script src="js/app.js" defer></script>
+    <title>Results summary component</title>
+  </head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/iconmoon.css">
-  <link rel="stylesheet" href="css/loadingstate.css">
-  <link rel="stylesheet" href="css/stylesheet.css">
-  <script src="app.js" defer></script>
-  <title>Results summary component</title>
-  
-</head>
-
-<body class="d-flex">
-  
+  <body class="d-flex">
     <div class="card d-flex shadow-10 hide">
       <section id="result" class="left-col text-pure-white d-flex">
         <header class="light-lavander">Your Results</header>
@@ -24,20 +27,21 @@
           <small class="grey fw-500">of 100</small>
         </div>
         <div id="comparison" class="bottom d-flex">
-            <h3 class="pure-white">Great</h3>
-            <p class="light-lavander">You scored higher than <span>#</span>% of the people who have taken these tests.</p>
+          <h3 class="pure-white">Great</h3>
+          <p class="light-lavander">
+            You scored higher than <span>#</span>% of the people who have taken
+            these tests.
+          </p>
         </div>
       </section>
       <section class="right-col d-flex">
         <header>Summary</header>
-        <div id="summary-list-container" class="result-summary-list d-flex">
-        </div>
+        <div
+          id="summary-list-container"
+          class="result-summary-list d-flex"
+        ></div>
         <button class="btn-primary color-primary-gradient">Continue</button>
       </section>
     </div>
- 
- 
-
-
-</body>
+  </body>
 </html>
