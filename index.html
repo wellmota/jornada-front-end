@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/iconmoon.css" />
+    <link rel="stylesheet" href="css/loadingstate.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <script src="js/app.js" defer></script>
+    <title>Results summary component</title>
+  </head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <body class="d-flex">
+    <div class="card d-flex shadow-10 hide">
+      <section id="result" class="left-col text-pure-white d-flex">
+        <header class="light-lavander">Your Results</header>
+        <div class="result-score bold d-flex pure-white">
+          <h2>#</h2>
+          <small class="grey fw-500">of 100</small>
+        </div>
+        <div id="comparison" class="bottom d-flex">
+          <h3 class="pure-white">Great</h3>
+          <p class="light-lavander">
+            You scored higher than <span>#</span>% of the people who have taken
+            these tests.
+          </p>
+        </div>
+      </section>
+      <section class="right-col d-flex">
+        <header>Summary</header>
+        <div
+          id="summary-list-container"
+          class="result-summary-list d-flex"
+        ></div>
+        <button class="btn-primary color-primary-gradient">Continue</button>
+      </section>
+    </div>
+  </body>
 </html>
